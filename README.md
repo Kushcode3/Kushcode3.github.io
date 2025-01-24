@@ -21,14 +21,21 @@ Skills:
 
 Programming Languages: Python, SQL
 Machine Learning & Deep Learning: Scikit-learn, XGBoost, TensorFlow, Keras, Pyspark, LangChain, NLTK, spaCy, Hugging Face, Transformers, LLMs, CNN, RNN
+
 Data Engineering & Preprocessing: Pandas, NumPy, PyMuPDF, BeautifulSoup, Tesseract OCR
+
 Model Evaluation & Optimization: SHAP, Cross-Validation, Grid Search, Hyperparameter Tuning, Precision, Recall, F1-Score, ROC-AUC
+
 Data Visualization: Matplotlib, Seaborn, Plotly
+
 Statistical Analysis: Hypothesis Testing
+
 Others: Flask, Streamlit, FastAPI
 
 🌱 My Approach: I believe in an iterative, data-centric approach to solving problems, where I constantly evaluate and refine models to ensure they are not only accurate but also practical and scalable. I’m driven by the philosophy that real-world applications are the best learning grounds.
 
 ✉️  You can contact me at kush.bhardwajjj@gmail.com
+
 🧠  I'm learning Agentic AI
+
 ⚡  I'm a Hyper-realistic sketch artist in my free time.
