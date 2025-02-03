@@ -1,416 +1,192 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* General Styles */
+/*  General Styles */
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
+  background-color: black;
+  color: white;
+  font-family: sans-serif; /* Use a clear sans-serif font */
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-#wrapper {
-    display: flex; /* Use Flexbox to control layout */
-    min-height: 100vh; /* Ensure wrapper takes full viewport height */
-}
-
-#main {
-    flex: 3; /* Main content takes up more space */
-    padding: 20px;
-}
-
-#sidebar {
-    flex: 1; /* Sidebar takes up less space */
-    padding: 20px;
-    background-color: #1a1a1a; /* Darker sidebar background */
-}
-
-.inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header */
+/* Header Styling */
 #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
-    transition: background 0.3s ease; /* Smooth background transition */
-}
-
-#header:hover {
-  background: rgba(10, 10, 10, 0.8);
+    position: fixed;  /* Fixed header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    z-index: 100; /* Ensure header is on top */
 }
 
 
+/* Header Link Styling */
+#header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Transparent Background & Golden Hover Effect */
+#header a {
+    background-color: transparent;
+}
+
+#header a:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+    color: gold;
+}
+
+
+/* Header Navigation Links */
 #header .logo {
-  font-size: 1.5em;
-  font-weight: bold;
+    font-weight: bold;
+    font-size: 1.5em;
+    flex: 1;
 }
 
 #header ul.icons {
-  list-style: none;
-  display: flex;
-  align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display icons horizontally */
 }
 
 #header ul.icons li {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
-#header ul.icons a {
-  font-size: 1.3em;
-}
-
-/* Navigation Menu */
-#menu {
-  margin-top: 30px;
-}
-
-#menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-#menu li a {
-  display: block;
-  padding: 10px 0;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-#menu li a:hover {
-  color: #ffd700;
-}
-
-#menu ul ul {
-  margin-left: 20px;
+#header ul.icons li a {
+    font-size: 1.4em;
+    padding: 0;
 }
 
 
-#menu ul li.opener > a:after {
-    content: '\25BE'; /* Downward arrow */
-    margin-left: 5px;
-    float: right;
-    transition: transform 0.3s ease;
-
-}
-
-#menu ul li.opener.active > a:after {
-    transform: rotate(180deg);
-}
-/*  Introduction Section */
-#banner {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 0;
-}
-
-
-#banner .content {
-  flex: 1;
-  padding-right: 30px;
-}
-
-
-#banner .content h2 {
-  margin-bottom: 15px;
-}
-
-#banner .content h4 {
-  font-weight: normal;
-  line-height: 1.6;
-}
-
-#banner .content ul.actions {
-  list-style: none;
-  margin-top: 20px;
-}
-
-#banner .content ul.actions li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-#banner .image {
-  flex: 1;
-  max-width: 40%;
-}
-
-#banner .image img {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
-}
-
-
-/* Technical Skills Section */
-section {
-  margin-top: 50px;
-}
-
-
-section .major {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 1.5em;
-}
-
-section .major i {
-  margin-right: 5px;
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.features article {
-  flex-basis: 45%;
-  margin-bottom: 20px;
-  background-color: #1a1a1a; /* Slightly darker background */
-  padding: 20px;
-  border-radius: 8px;
-}
-.features .content h3 {
-  margin-bottom: 10px;
-}
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
-.skill-button {
-  background-color: #333; /* Dark gray background */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  display: inline-flex;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  position: relative; /* For tooltip positioning */
-}
-.skill-button:hover {
-    background-color: #555;
-    transform: translateY(-2px);
-}
-.skill-icon {
-    margin-right: 5px;
-    font-size: 1.2em;
-}
-.skill-button[data-tooltip]:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: -100%; /* Position above button */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #222; /* Darker background */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-  z-index: 1000;
-}
-
-
-/* Projects Section */
+/* Projects Section - Vertical Stacks */
 .posts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: column;  /* Stack projects vertically */
+    padding-top: 1em;
 }
-
 
 .posts article {
-  flex-basis: 30%;
-  margin-bottom: 30px;
-  background: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden; /* Clip overflow to keep border radius */
-  transition: transform 0.3s ease;
-
+    display: flex;
+    margin-bottom: 2em;
+    align-items: center;  /* Vertically center content */
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.posts article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Project hover effect*/
+.posts article:hover{
+ background-color: rgba(255, 215, 0, 0.1);
 }
 
 .posts article .image {
-    max-height: 200px;
-    overflow: hidden;
-
+    width: 200px;    /* Adjust image width */
+    height: 150px;   /* Adjust image height */
+    flex-shrink: 0;  /* Prevent image from shrinking */
+    margin-right: 20px;
 }
+
 .posts article .image img {
     width: 100%;
-    display: block;
-    object-fit: cover; /* Ensure image covers container while maintaining aspect ratio */
-    transition: transform 0.5s ease;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+
 }
 
-.posts article:hover .image img {
-    transform: scale(1.1); /* Slight scale on hover */
+
+.posts article h3,
+.posts article p {
+    margin: 0;
+    color: white; /* Set text color for project details */
 }
 
 .posts article h3 {
-  padding: 10px 20px;
-  margin-bottom: 10px;
-}
-.posts article p {
-  padding: 0 20px;
-}
-.posts article ul.actions {
-  padding: 10px 20px;
-  list-style: none;
-  text-align: right; /* Align actions to the right */
-}
-
-.posts article ul.actions li {
-  display: inline; /* Make actions display inline */
-}
-
-/* button styles */
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-
-.button:hover {
-    background-color: #555;
-}
-
-.button.big {
-  font-size: 1.2em;
-  padding: 15px 25px;
-}
-
-/* Footer */
-#footer {
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 50px;
-}
-
-#footer .copyright {
-  font-size: 0.8em;
-  color: #888;
-}
-
-
-/* Golden Hover Effect */
-body:hover {
-    background-color: #000;
-    transition: background-color 0.5s ease;
-}
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent; /* Start with a transparent background */
-    transition: background-color 0.5s ease; /* Smooth transition */
-    z-index: -1;
-}
-
-body:hover::before {
-    background-color: #ffd70010;  /* slight golden color for hover */
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 980px) {
-    #wrapper {
-        flex-direction: column;
-    }
-
-    #sidebar {
-        width: 100%;
-    }
-
-    .posts article {
-        flex-basis: 45%;
-    }
-     .features article {
-        flex-basis: 100%;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .posts article {
-        flex-basis: 100%;
-    }
-      #banner {
-        flex-direction: column;
-    }
-
-    #banner .content, #banner .image {
-    flex: 1;
-    width: 100%;
-     }
-}
-
-/* Contact */
-.contact {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.contact li {
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
 }
 
-.contact li .icon {
-    margin-right: 10px;
-    font-size: 1.2em;
+.posts article .actions {
+   list-style: none;
+   padding:0;
+   margin:0;
+   margin-top: 10px;
+}
+.posts article .actions li{
+    margin: 0px;
+}
+
+
+.posts article .actions .button {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
     display: inline-block;
-    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contact li a {
-    color: #fff;
+.posts article .actions .button:hover {
+    background-color: rgba(255, 215, 0, 0.4);
+    color: gold;
+}
+
+
+/* Footer Styling */
+#footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    transition: background-color 0.3s ease;
+}
+#footer:hover{
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+#footer .copyright{
+    margin: 0;
+}
+
+/*Contact Styling*/
+
+#sidebar .inner section.major {
+    margin: 20px;
+}
+#sidebar .inner ul.contact{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+#sidebar .inner ul.contact li a{
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.contact li a:hover {
-  color: #ffd700;
+#sidebar .inner ul.contact li a:hover{
+    color: gold;
+}
+#sidebar{
+ background-color: #1a1a1a;
+}
+/* Menu styling */
+#sidebar #menu ul li a {
+   color: white;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+#sidebar #menu ul li a:hover{
+   color: gold;
 }
 
-/* Extra styles */
-.opener {
-    cursor: pointer;
+#sidebar #menu ul li.opener:hover{
+   color: gold;
 }
